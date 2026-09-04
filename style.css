@@ -572,9 +572,9 @@
          開催概要 & アクセス
          ========================================================================== */
       .info-card {
-        background: var(--card-bg);
+        background: var(--bg-card);
         border: 1px solid var(--card-border);
-        box-shadow: 0 0 15px rgba(255, 243, 160, 0.1);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 0 15px rgba(255, 243, 160, 0.05);
         border-radius: 16px;
         padding: 24px 20px;
         backdrop-filter: blur(8px);
@@ -887,4 +887,90 @@
   
       .item-list li:last-child {
         border-bottom: none;
+      }
+
+      /* ==========================================================================
+         atogakiメッセージ
+         ========================================================================== */
+         .colophon-section {
+          text-align: center;
+          margin-bottom: 80px;
+      }
+
+      /* チェックボックスを完全に隠す */
+      #colophon-toggle {
+          display: none;
+      }
+
+      /* 開閉用のボタン（ラベル）のデザイン */
+      .colophon-btn {
+          display: inline-block;
+          background: linear-gradient(135deg, rgba(195, 177, 225, 0.25), rgba(255, 183, 178, 0.25));
+          border: 1px solid var(--pastel-purple);
+          color: var(--pastel-yellow);
+          padding: 14px 35px;
+          border-radius: 30px;
+          font-size: 1rem;
+          font-weight: bold;
+          letter-spacing: 1.5px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          box-shadow: 0 0 20px rgba(195, 177, 225, 0.25);
+          user-select: none;
+      }
+
+      .colophon-btn:hover {
+          background: rgba(195, 177, 225, 0.45);
+          transform: translateY(-3px);
+          box-shadow: 0 0 25px rgba(195, 177, 225, 0.5);
+      }
+
+      /* ああとがき本文の初期状態（折りたたまれている状態） */
+      .colophon-content {
+          max-height: 0;
+          overflow: hidden;
+          opacity: 0;
+          transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease, padding 0.4s ease;
+          padding: 0 30px;
+          border: none;
+          margin-top: 0;
+          text-align: left;
+      }
+
+      /* チェックが入ったときの展開状態 */
+      #colophon-toggle:checked ~ .colophon-content {
+          max-height: 800px;
+          opacity: 1;
+          padding: 35px;
+          margin-top: 30px;
+          border: 1px solid var(--pastel-purple);
+          background: rgba(19, 19, 29, 0.9);
+          border-radius: 20px;
+          box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6), inset 0 0 20px rgba(195, 177, 225, 0.1);
+      }
+
+      .colophon-header {
+          font-size: 1.2rem;
+          color: var(--pastel-yellow);
+          font-weight: bold;
+          margin-bottom: 15px;
+          text-align: center;
+          letter-spacing: 1px;
+      }
+
+      .colophon-text {
+          line-height: 1.9;
+          color: #e0e0e6;
+          font-size: 0.95rem;
+          letter-spacing: 0.5px;
+      }
+
+      .colophon-text p {
+          margin-bottom: 1.2em;
+      }
+      .colophon-text p:last-child {
+          margin-bottom: 0;
+          text-align: right;
+          color: var(--pastel-purple);
+          font-weight: bold;
       }
