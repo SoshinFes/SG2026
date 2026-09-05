@@ -494,6 +494,7 @@
         color: var(--pastel-yellow);
         font-size: 22px;
         font-weight: bold;
+        text-align: center;
         margin-bottom: 8px;
       }
   
@@ -507,6 +508,32 @@
         border-radius: 6px;
         display: inline-block;
         margin-top: 10px;
+      }
+      
+      .notice-wrapper{
+        text-align: center;
+      }
+
+      .notice-card { 
+        background:  (--bg-card); border: 1px solid rgba( --card-bg); 
+      }
+      .notice-category { 
+        font-size: 1.1rem; color: var(--pastel-pink); 
+        font-weight: bold; margin-bottom: 15px; 
+        letter-spacing: 1px; 
+        border-bottom: 1px dashed var(--pastel-yellow);
+        padding-bottom: 8px; 
+      }
+      .notice-list { 
+        margin: 0 0 25px 0; padding-left: 20px; 
+        color: #e0e0e6; line-height: 1.8; 
+        font-size: 0.95rem; letter-spacing: 0.5px; 
+      }
+      .notice-list:last-child { 
+        margin-bottom: 0; 
+      }
+      .notice-list li { 
+        margin-bottom: 10px; 
       }
   
       /* ==========================================================================
@@ -974,3 +1001,10 @@
           color: var(--pastel-purple);
           font-weight: bold;
       }
+
+
+        
+        
+
+
+
