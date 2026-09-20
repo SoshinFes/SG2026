@@ -1001,6 +1001,64 @@
           color: var(--pastel-purple);
           font-weight: bold;
       }
+/* ==========================================================================
+         TOPボタン
+ ========================================================================== */
+         /* 1. スクロールを滑らかにする（HTMLタグに適用） */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 2. トップへ戻るボタンのスタイル */
+.pagetop {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  
+  /* サイズと丸い形状 */
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  
+/* 色の設定（ベース：明るい黄色、文字：ダークブラウン） */
+background-color: var(--pastel-yellow);
+color: var(--bg-card);
+border: 4px solid #FFFFFF;
+box-shadow: 0 8px 20px rgba(255, 220, 0, 0.4), 0 4px 10px rgba(0, 0, 0, 0.1);
+  
+  /* レイアウト */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  
+  /* アニメーション */
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ホバー（マウスをのせたとき）の動作 */
+.pagetop:hover {
+  transform: translateY(-5px) scale(1.08);
+  box-shadow: 0 12px 25px rgba(255, 220, 0, 0.6), 0 6px 12px rgba(0, 0, 0, 0.15);
+  background-color: var(--pastel-yellow);
+}
+
+/* ボタンの中に入れる画像の設定（サイズと丸み） */
+.pagetop-img {
+  width: 60px;        /* 画像の横幅（小さく・大きくしたい場合はこの数字を調整） */
+  height: 60px;       /* 画像の高さ */
+  object-fit: contain;/* 画像が潰れずに綺麗に収まる設定 */
+}
+
+/* アイコンや文字のクリック判定をボタン本体に集約 */
+.pagetop * {
+  pointer-events: none;
+}
+         
+
+
 
 
         
